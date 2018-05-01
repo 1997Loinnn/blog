@@ -91,6 +91,6 @@ class PostController extends Controller
     }
     public function showByTag(Tag $tag)
     {
-        return view('tags.index', ['posts' => $tag->posts()->simplePaginate(3)]);
+        return view('posts.index', ['posts' => $tag->posts()->simplePaginate(3)]);
     }
 }
